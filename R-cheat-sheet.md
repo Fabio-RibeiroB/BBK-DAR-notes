@@ -1,12 +1,42 @@
+## clean environment
+```rm(list = ls())``
 
+## Clear console
+control + L
+
+## Basic stats
+```
+mean()
+var()
+```
+## For loops
+
+## Error rate
+```mean(y.predict != y.test)```
 
 ## Read csv
 ```read.csv(filename)```
 
-## Create a numeric variable
+### Create a numeric variable
 ```as.numeric()```
 
-## K-fold CV
+## Predict: create a vector of predictions
+```predict(model, newdata=x.test)```
+## Prediction:
+```
+library(ROCR)
+prediction(predictions vector, true class labels vector)
+```
+### Replications: Returns a vector or a list of the number of replicates for each term in the formula.
+```rep(1,100)```
+One hundred repeats of 1 in a vector
+
+## Sample: sample takes a sample of the specified size from the elements of x using either with or without replacement.
+```sample(x, size, replace = FALSE)```
+
+
+## K-fold CV (load caret library)
+ ```library(caret)```
 ```createFolds(y=training_data[, target-column], k=number-of-folds)```
 
 # Logistic Regression
